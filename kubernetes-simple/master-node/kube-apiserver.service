@@ -6,6 +6,7 @@ After=network.target
 ExecStart={{BIN_PATH}}/kube-apiserver \
   --admission-control=NamespaceLifecycle,LimitRanger,DefaultStorageClass,ResourceQuota,NodeRestriction \
   --insecure-bind-address=0.0.0.0 \
+  --insecure-port=8988 \
   --kubelet-https=false \
   --service-cluster-ip-range=10.68.0.0/16 \
   --service-node-port-range=20000-40000 \
